@@ -79,11 +79,12 @@ class Solver:
             print()
 
 
-start = np.array([[2, 8, 3], [1, 6, 4], [7, 0, 5]])
-goal = np.array([[1, 2, 3], [8, 0, 4], [7, 6, 5]])
+start = np.array([[1, 2, 3], [5, 6, 0], [7, 8, 4]])
+goal = np.array([[1, 2, 3], [5, 8, 6], [0, 7, 4]])
 solver = Solver(start, goal)
 solution = solver.solve()
 if solution:
+    print("La forma de solucionarlo es:")
     solver.print_solution(solution)
 else:
     print("No solution found")
